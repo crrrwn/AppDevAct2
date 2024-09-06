@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Item</title>
+</head>
+<body>
+    <h1>Edit Item</h1>
+    <form action="/items/<%= id %>" method="POST">
+        <label for="item">Item:</label>
+        <input type="text" id="item" name="item" value="<%= item %>" required>
+        <button type="submit">Update</button>
+    </form>
+    <a href="/">Back to List</a>
+</body>
+</html>

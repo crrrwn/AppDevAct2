@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD App</title>
+</head>
+<body>
+    <h1>Items</h1>
+    <a href="/items/new">Add New Item</a>
+    <ul>
+        <% items.forEach((item, index) => { %>
+            <li>
+                <%= item %> 
+                <a href="/items/<%= index %>/edit">Edit</a>
+                <form action="/items/<%= index %>/delete" method="POST" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
+
